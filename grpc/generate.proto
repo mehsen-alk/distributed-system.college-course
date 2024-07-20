@@ -1,0 +1,21 @@
+syntax = 'proto3';
+
+service summer{
+    rpc SumNum(SumRequest) returns(SumReply){}
+    rpc FactNum(FactRequest) returns(FactReply){}
+}
+message SumRequest{
+    int32 x=1;
+    int32 y=2;
+}
+message SumReply{
+    string sum=1;
+}
+
+message FactRequest{
+    int32 n=1;
+}
+
+message FactReply{
+    string fact=1;
+}
