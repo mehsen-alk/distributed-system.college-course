@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package movies;
+
+message Movie {
+    string title = 1;
+    string director = 2;
+    int32 release_year = 3;
+    string genre = 4;
+    float average_rating = 5;
+}
+
+message MovieTitleRequest {}
+
+message MovieTitleResponse {
+    repeated string titles = 1;
+}
+
+message AddMovieRequest {
+    string title = 1;
+    string director = 2;
+    int32 release_year = 3;
+    string genre = 4;
+}
+
+message AddMovieResponse {
+    string message = 1;
+}
+
+message MovieLookupRequest {
+    string title = 1;
+}
+
+message MovieLookupResponse {
+    int32 release_year = 1;
+}
+
+service MovieService {
+    rpc GetMoviesTitle(MovieTitleRequest) returns (MovieTitleResponse);
+    rpc AddMovie(AddMovieRequest) returns (AddMovieResponse);
+    rpc LookupDate(MovieLookupRequest) returns (MovieLookupResponse);
+}
