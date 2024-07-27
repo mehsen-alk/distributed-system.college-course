@@ -10,7 +10,7 @@ class MovieServer:
     def add_movie(self, title, director, release_year, genre):
         movie = movies.Movie(title, director, release_year, genre)
         movies.add_to_db(movie)
-        return '204 no content'
+        return '200 Added Successfully'
 
     def lookup_date(self, title):
         return movies.lookUpDate(title)

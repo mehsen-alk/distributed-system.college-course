@@ -92,6 +92,8 @@ def lookUpDate(title, db_name=DB_PATH):
             movieInfo = movieR.split(',')
             if movieInfo[0].find(title) >= 0:
                 return movieInfo[2]
+            else:
+                return 404
 
 
 def getMoviesTitle(db_name=DB_PATH):

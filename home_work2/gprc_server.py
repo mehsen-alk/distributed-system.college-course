@@ -19,10 +19,12 @@ class MovieService(movies_pb2_grpc.MovieServiceServicer):
             genre=request.genre
         )
         movies.add_to_db(movie)
-        return movies_pb2.AddMovieResponse(message='204 no content')
+        return movies_pb2.AddMovieResponse(message='200 Added Successfully')
 
     def LookupDate(self, request, context):
+        print(request.title)
         release_year = movies.lookUpDate(request.title)
+        print(release_year)
         return movies_pb2.MovieLookupResponse(release_year=int(release_year))
 
 
