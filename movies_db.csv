@@ -1,0 +1,10 @@
+id,title,director,release_year,genre,
+1,The Avengers,Joss Whedon,2012,Action,['None']
+2,WALL-E,Andrew Stanton,2008,Animation,['None']
+3,The Avengers,Joss Whedon,2012,Action,['None']
+4,WALL-E,Andrew Stanton,2008,Animation,['None']
+5,up,flan,2008,animation,['None']
+6,Inception,Christopher Nolan,2010,Sci-Fi,['0']
+7,hi,Mohsen,12,12,['0']
+8,l,Mohsen,12,12,['0']
+9,Moh,Christopher Nolan,2010,Sci-Fi,0
